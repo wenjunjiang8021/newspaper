@@ -1,0 +1,12 @@
+.button-top {
+  display: flex;
+  justify-content: center;
+}
+.button-top .button-menu {
+  background-color: #ffd575;
+  padding: 15px 32px;
+  font-size: 1.5em;
+  margin: 4px 2px;
+}
+
+/*# sourceMappingURL=/newspaper.e31bb0bc.css.map */
