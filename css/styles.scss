@@ -1,10 +1,199 @@
-.button-top {
-    display: flex;
-    justify-content: center;
-    .button-menu {
-      background-color: #ffd575;
-      padding: 15px 32px;
-      font-size: 1.5em;
-      margin: 4px 2px;
+/* $breakpoint-phone: 576px; //or 480? auto
+$breakpoint-tablet: 768px; //750
+$breakpoint-laptop: 992px; //960
+$breakpoint-desktop: 1200px; //1140 */
+:root {
+    --c1:#e9ecf2;
+    --c2:#a3b2bf;
+    --c3:#10261e;
+    --c4:#2e594a;
+    --c5:#3d735f;
+  }
+  
+  $theme-black: #111111;
+  /*
+  Screen sizes:
+    xs: 0 - 480px;
+    sm: 480.1px - 768px;
+    md: 768.1px - 992px;
+    lg: 992.1ps - 1200px;
+    xl: 1200.1px and above
+  */
+  $breakpoints: 480px, 768px, 992px, 1200px;
+  @mixin screen($width, $type: 'only') {
+    $index: 0;
+    @if $width == 'xs' {
+        $index: 1;
+    } @else if $width == 'sm' {
+        $index: 2;
+    } @else if $width == 'md' {
+        $index: 3;
+    } @else if $width == 'lg' {
+        $index: 4;
+    }  @else if $width == 'xl' {
+        $index: 5
+    }
+    @if $index != 0 {
+        @if $type == 'only' {
+            @if $width == 'xs' {
+                @media only screen and (max-width: nth($breakpoints, $index)) {
+                    @content;
+                }
+            } @else if $width == 'xl' {
+                @media only screen and (min-width: nth($breakpoints, $index - 1)) {
+                    @content;
+                }
+            } @else {
+                @media only screen and (min-width: nth($breakpoints, $index - 1) + 0.001)
+                and (max-width: nth($breakpoints, $index)) {
+                    @content;
+                }
+            }
+        } @else if $type == 'and-below' {
+            @if $width != 'xl' {
+                @media only screen and (max-width: nth($breakpoints, $index)) {
+                    @content;
+                }
+            } @else {
+                @content;
+            }
+        } @else if $type == 'and-above' {
+            @if $width != 'xs' {
+                @media only screen and (min-width: nth($breakpoints, $index - 1) + 0.001) {
+                    @content;
+                }
+            } @else {
+                @content;
+            }
+        } @else {
+            @content;
+        }
+    } @else {
+        @content;
     }
   }
+  @mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+  }
+  @mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+  }
+  @mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+  }
+  // Enable hardware acceleration
+  // Ref: https://engageinteractive.co.uk/blog/top-10-scss-mixins
+  @mixin hardware($backface: true, $perspective: 1000) {
+    @if $backface {
+        backface-visibility: hidden;
+    }
+    perspective: $perspective;
+  }
+  @mixin absolute-position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  
+  /* mobile first framework*/
+  .flexbox {
+    display: flex;
+  }
+  .flexbox-inline {
+    display: inline-flex;
+  }
+  .flexbox::before,
+  .flexbox::after,
+  .flexbox-inline::before,
+  .flexbox-inline::after {
+    display: none;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  @include screen('sm') {
+    .container {
+        padding: 0 15px;
+    }
+  }
+  @include screen('md') {
+    .container {
+        max-width: 750px;
+        padding: 0 8px;
+    }
+  }
+  @include screen('lg') {
+    .container {
+        max-width: 960px;
+        padding: 0 12px;
+    }
+  }
+  @include screen('xl') {
+    .container {
+        max-width: 1200px;
+        padding: 0 16px;
+    }
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: $theme-black;
+    &:hover{
+        color: #174e96 !important;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* header */
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  .header-logo {
+    height: 100px;
+    border-bottom: 3px solid #111111;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    .fa-envelope {
+      background: black;
+      padding: 0 20px;
+      line-height: 40px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      img {
+        height: 60px;
+        margin: 0 auto;
+      }
+      ::before {
+        content: "♥";
+        color: white;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}

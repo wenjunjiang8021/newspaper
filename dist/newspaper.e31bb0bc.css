@@ -1,12 +1,111 @@
-.button-top {
-  display: flex;
-  justify-content: center;
+@charset "UTF-8";
+/* $breakpoint-phone: 576px; //or 480? auto
+$breakpoint-tablet: 768px; //750
+$breakpoint-laptop: 992px; //960
+$breakpoint-desktop: 1200px; //1140 */
+:root {
+  --c1:#e9ecf2;
+  --c2:#a3b2bf;
+  --c3:#10261e;
+  --c4:#2e594a;
+  --c5:#3d735f;
 }
-.button-top .button-menu {
-  background-color: #ffd575;
-  padding: 15px 32px;
-  font-size: 1.5em;
-  margin: 4px 2px;
+
+/*
+Screen sizes:
+  xs: 0 - 480px;
+  sm: 480.1px - 768px;
+  md: 768.1px - 992px;
+  lg: 992.1ps - 1200px;
+  xl: 1200.1px and above
+*/
+/* mobile first framework*/
+.flexbox {
+  display: flex;
+}
+
+.flexbox-inline {
+  display: inline-flex;
+}
+
+.flexbox::before,
+.flexbox::after,
+.flexbox-inline::before,
+.flexbox-inline::after {
+  display: none;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 480.001px) and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 768.001px) and (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    padding: 0 8px;
+  }
+}
+@media only screen and (min-width: 992.001px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+    padding: 0 12px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 16px;
+  }
+}
+a {
+  text-decoration: none !important;
+  color: #111111;
+}
+a:hover {
+  color: #174e96 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header */
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header .header-logo {
+  height: 100px;
+  border-bottom: 3px solid #111111;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.header .header-logo .fa-envelope {
+  background: black;
+  padding: 0 20px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.header .header-logo .fa-envelope img {
+  height: 60px;
+  margin: 0 auto;
+}
+.header .header-logo .fa-envelope ::before {
+  content: "♥";
+  color: white;
+}
+.header .header-logo .fa-envelope a {
+  color: white;
 }
 
 /*# sourceMappingURL=/newspaper.e31bb0bc.css.map */
