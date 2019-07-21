@@ -77,7 +77,7 @@ img {
   height: auto;
 }
 
-/* header */
+/* header logo */
 .header {
   max-width: 1200px;
   margin: 0 auto;
@@ -107,5 +107,24 @@ img {
 .header .header-logo .fa-envelope a {
   color: white;
 }
+
+/* menu */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  flex: 1 1 auto;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+ul li a {
+  line-height: 54px;
+  display: block;
+  text-align: center;
+}
+
+/* header post */
 
 /*# sourceMappingURL=/newspaper.e31bb0bc.css.map */
