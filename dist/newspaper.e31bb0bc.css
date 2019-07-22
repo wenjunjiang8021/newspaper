@@ -126,5 +126,24 @@ ul li a {
 }
 
 /* header post */
+.header-post {
+  border-top: 3px solid #e8e8e8;
+  border-bottom: 3px solid #e8e8e8;
+  padding: 20px 0;
+}
+.header-post .wrap {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.header-post .wrap .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.header-post .wrap .date {
+  font-size: 11px;
+}
+.header-post .wrap .date ::before {
+  content: "♥";
+}
 
 /*# sourceMappingURL=/newspaper.e31bb0bc.css.map */

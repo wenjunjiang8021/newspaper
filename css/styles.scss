@@ -214,3 +214,22 @@ ul {
   }
 }  
 /* header post */
+.header-post{
+  border-top: 3px solid #e8e8e8;
+  border-bottom: 3px solid #e8e8e8;
+  padding: 20px 0;
+  .wrap {
+    margin-top: 0;
+    margin-left: 10px;
+    .title {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .date {
+      font-size: 11px;
+      ::before {
+        content: "♥";
+      }
+    }
+  }
+}
