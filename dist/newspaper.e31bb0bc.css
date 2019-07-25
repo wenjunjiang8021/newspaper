@@ -482,4 +482,59 @@ ul li a {
   color: white;
 }
 
+/* section-bottom */
+.section-bottom {
+  padding-top: 48px;
+}
+.section-bottom .card {
+  padding-left: 30px;
+}
+.section-bottom .card .card-title {
+  border-bottom: 2px solid #111111;
+  padding-bottom: 8px;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 700;
+}
+.section-bottom .card .post-primary {
+  display: flex;
+}
+.section-bottom .card .post-primary .thumb {
+  flex-shrink: 0;
+  max-width: 40%;
+}
+.section-bottom .card .post-primary .other {
+  padding-left: 15px;
+}
+.section-bottom .card .post-primary .other .title {
+  font-family: "Libre Baskerville";
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 0;
+  font-weight: 400;
+}
+.section-bottom .card .post-primary .other .info {
+  color: #808080;
+  font-size: 12px;
+  font-family: "Work Sans";
+  text-transform: uppercase;
+}
+.section-bottom .card .post {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.section-bottom .card .post .title {
+  font-family: "Libre Baskerville";
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.section-bottom .card .post .info {
+  color: #808080;
+  font-size: 12px;
+  font-family: "Work Sans";
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=/newspaper.e31bb0bc.css.map */
