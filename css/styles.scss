@@ -527,7 +527,55 @@ ul {
         font-family: "Work Sans";
         text-transform: uppercase;
       }
+    } 
+  }
+}
+/* video */
+.video {
+  background-color: #111111;
+  width: 100%;
+  overflow: hidden;
+  padding: 108px 0;
+  .main-video {
+    max-width: 1200px;
+    padding: 0 16px;
+    justify-content: space-evenly;
+    .play-wrap {
+      min-width: 60%;
+      padding-bottom: 33.75%;
+      background-position: 50%;
+      background-size: cover;
     }
-    
+    .title {
+      color: white;
+      font-size: 36px;
+      font-family: "Libre Baskerville";
+      padding-left: 20px;
+    }
+  }     
+}
+// .play {
+//   color: white;
+//   font-size: 60px;
+//   margin-left: 350px;
+//   margin-top: 200px;
+// }
+.other-videos {
+  max-width: 1200px;
+  padding: 0 16px;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  .play-wrap {
+    min-width: 60%;
+    padding-bottom: 50%;
+    background-position: 50%;
+    background-size: cover;
+    margin-right: 15px;
+  }
+  .title {
+    font-size: 15px;
+    padding-left: 0;
+    font-family: "Libre Baskerville";
+    color: white;
   }
 }
