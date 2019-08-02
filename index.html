@@ -24,33 +24,19 @@
           </span>
         </div>
         <div class="head-menu">
-          <ul class="flexbox">
-            <li>
-              <a href="#">世界</a>
-            </li>
-            <li>
-                <a href="#">政治</a>
-            </li>
-            <li>
-                <a href="#">商業與經濟</a>
-            </li>
-            <li>
-                <a href="#">社會</a>
-            </li>
-            <li>
-                <a href="#">科學於技術</a>
-            </li>
-            <li>
-                <a href="#">歷史與文化</a>
-            </li>
-            <li>
-                <a href="#">專欄</a>
-            </li>
-            <li>
-                <a href="#">生活</a>
-            </li>
-          </ul>
-        </div>
+            <ul class="flexbox" id="menu">
+            </ul>
+          </div>
+<script>
+  var menu = ["世界", "政治", "商業於經濟", "社會", "科學與技術", "歷史與文化", "專欄", "生活"];
+  var i;
+  for (i = 0; i < menu.length; i++) {
+    document.getElementById("menu").innerHTML += "<li><a href=“#”>"+menu[i]+"</a></li>";
+  }
+</script>
+
+
+
         <div class="head-post flexbox">
           <div class="wrap-post">
             <div class="post flexbox">
