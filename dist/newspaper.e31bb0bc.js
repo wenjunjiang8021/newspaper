@@ -195,12 +195,30 @@ module.hot.accept(reloadCSS);
 require("./css/styles.scss");
 
 // import classes from '/css/styles.css';
+
+/* menu */
 var menu = ["世界", "政治", "商業於經濟", "社會", "科學與技術", "歷史與文化", "專欄", "生活"];
 var i;
 
 for (i = 0; i < menu.length; i++) {
   document.getElementById("menu").innerHTML += "<li><a href=“#”>" + menu[i] + "</a></li>";
 }
+/* headthree */
+
+
+var headtitle = "Watch Justin Timberlake’s ‘Cry Me a River’ Come to Life in Mesmerizing Dance";
+document.getElementById("headtitle").textContent = headtitle;
+var headtime = "August 30, 2017";
+document.getElementById("headtime").textContent = headtime;
+/* headthreeimg */
+
+var img = document.createElement("img");
+img.src = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg";
+img.alt = "These Edible Pick-Up Sticks Let You Play With Your Food"; // img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg 75w";
+// img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-150x150.jpg 150w";
+
+var headimgcoffee = document.getElementById("headimgthree");
+headimgcoffee.appendChild(img);
 },{"./css/styles.scss":"css/styles.scss"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -229,7 +247,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55376" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50211" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
