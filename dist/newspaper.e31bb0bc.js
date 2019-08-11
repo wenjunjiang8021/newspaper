@@ -204,21 +204,26 @@ for (i = 0; i < menu.length; i++) {
   document.getElementById("menu").innerHTML += "<li><a href=“#”>" + menu[i] + "</a></li>";
 }
 /* headthree */
+// var headtitle = "Watch Justin Timberlake’s ‘Cry Me a River’ Come to Life in Mesmerizing Dance";
+// document.getElementById("headtitle").textContent = headtitle;
+// var headtime = "August 30, 2017";
+// document.getElementById("headtime").textContent = headtime;
+// /* headthreeimg */
+// var img = document.createElement("img"); 
+// img.src = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg";
+// img.alt = "These Edible Pick-Up Sticks Let You Play With Your Food";
+// // img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg 75w";
+// // img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-150x150.jpg 150w";
+// var headimgcoffee = document.getElementById("headimgthree");
+// headimgcoffee.appendChild(img);
 
 
-var headtitle = "Watch Justin Timberlake’s ‘Cry Me a River’ Come to Life in Mesmerizing Dance";
-document.getElementById("headtitle").textContent = headtitle;
-var headtime = "August 30, 2017";
-document.getElementById("headtime").textContent = headtime;
-/* headthreeimg */
+var post = '<div class="wrap-post">' + '<a href="#">' + '<div id="headimgthree" width="75" height="75"></div>' + '</a>' + '</div>';
+var x;
 
-var img = document.createElement("img");
-img.src = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg";
-img.alt = "These Edible Pick-Up Sticks Let You Play With Your Food"; // img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-75x75.jpg 75w";
-// img.srcset = "https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/jnews-demo-12-150x150.jpg 150w";
-
-var headimgcoffee = document.getElementById("headimgthree");
-headimgcoffee.appendChild(img);
+for (x = 0; x < 3; x++) {
+  document.getElementById("headpost").innerHTML += post;
+}
 },{"./css/styles.scss":"css/styles.scss"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -247,7 +252,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50211" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49510" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
